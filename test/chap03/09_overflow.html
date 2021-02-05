@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type=checkbox]:checked+div{
+            height:0;
+            width:600px;
+            height:300px;
+        }
+        div{
+            overflow:hidden;
+            width:0px;
+            height:0px;
+
+            /* 변환효과적용 */
+             /* 애니매이션 효과:시간 */
+            -ms-transform-duration:1s;
+            -webkit-transform-duration:1s;
+            -moz-transform-duration:1s;
+            transition-duration: 2s;
+           
+           
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox">
+    <div>
+        <h1>ad</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus commodi architecto est. Eos qui autem beatae nobis quae sapiente architecto quam voluptatum accusamus iure nam iste deserunt ullam, blanditiis perferendis.</p>
+    </div>
+</body>
+</html>
