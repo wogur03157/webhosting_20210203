@@ -22,7 +22,7 @@ h1 span:nth-child(5){
 h1 span:nth-child(6){
     color:#ea4335;
 }
-.portfolio-box{
-    width:"474";
-    height:"379";
+.col-lg-4 , .col-sm-6{
+    width:"474px";
+    height:"379px";
 }
