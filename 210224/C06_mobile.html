@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Helvetica', sans-serif;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #main_header {
+            height: 45px;
+            background: url('header_background.png');
+
+            position: relative;
+
+            text-align: center;
+            /* 수평중앙 */
+
+            line-height: 45px;
+            /* 수직중앙 */
+
+        }
+
+        #main_header>h1 {
+            color: white;
+        }
+
+        #main_header>a,
+        #main_header>label {
+            display: block;
+            height: 32px;
+            position: absolute;
+        }
+
+        #main_header>a.left {
+            width: 62px;
+            left: 5px;
+            top: 7px;
+        }
+
+        #main_header>label.right {
+            width: 32px;
+            right: 5px;
+            top: 7px;
+        }
+
+        #main_header>a.left {
+            background: url('css_sprites.png');
+            background-position: 0px 0px;
+
+        }
+
+        #main_header>label.right {
+            background: url('css_sprites.png') -65px -1px;
+            background-position: -62px 0px;
+            text-indent: -99999px;
+        }
+
+        #toggle {
+            display: none;
+        }
+
+        #toggle+#wrap>#toggle_gnb_wrap {
+            display: none;
+        }
+
+        #toggle:checked+#wrap>#toggle_gnb_wrap {
+            display: block;
+        }
+
+        #toggle_gnb_wrap {
+            background: wheat;
+            padding: 15px;
+        }
+
+        #toggle_gnb {
+            background: yellowgreen;
+            padding: 5px;
+
+        }
+
+        #toggle_gnb>ul {
+            overflow: hidden;
+        }
+
+        #toggle_gnb>ul>li {
+            width: 80px;
+            float: left;
+        }
+
+        /* 네비게이션 */
+        #top_gnb {
+            overflow: hidden;
+        }
+
+        #top_gnb>div>a {
+            float: left;
+            width: 25%;
+        }
+
+        /* 네비꾸미기 */
+        #top_gnb {
+            overflow: hidden;
+            border-bottom: 1pz solid black;
+            background: rgb(199, 148, 73);
+        }
+
+        #top_gnb>div>a {
+            float: left;
+            width: 25%;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            color: rgb(235, 227, 227);
+        }
+
+        #bottom_gnb {
+            display: table;
+            width: 100%;
+            border-bottom: 1px solid black;
+        }
+
+        #bottom_gnb>div {
+            display: table-cell;
+            position: relative;
+        }
+
+        #bottom_gnb>div>a {
+            display: block;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+        }
+
+        #bottom_gnb>div>a::before {
+            display: block;
+            position: absolute;
+            top: 9px;
+            left: -1px;
+            width: 1px;
+            height: 15px;
+            border-left: 1px solid black;
+            content: '';
+        }
+
+        #section_header {
+            padding: 20px;
+        }
+
+        #section_article {
+            padding: 20px;
+        }
+        #main_footer{
+            padding: 10px;
+            border-top: 3px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="toggle" />
+    <div id="wrap">
+        <header id="main_header">
+            <a class="left" href="#"></a>
+            <h1>Mobile</h1>
+            <label class="right" for="toggle">Toggle</label>
+        </header>
+        <div id="toggle_gnb_wrap">
+            <div id="toggle_gnb">
+                <ul>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav id="top_gnb">
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+        </nav>
+        <nav id="bottom_gnb">
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+        </nav>
+        <section id="main_section">
+            <header id="section_header">
+                <h1>Lorem, ipsum dolor.</h1>
+                <h1>lorem</h1>
+            </header>
+            <article id="section_article">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, dolore.</p>
+                <br>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore incidunt nesciunt accusamus!</p>
+                <br>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa reiciendis esse praesentium. Quidem,
+                    dignissimos maxime cumque soluta nesciunt dolores quae ducimus.</p>
+                <br>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio provident quos at vero tempora ad
+                    dolor sequi amet iure dolore repellat labore reiciendis doloribus, magni, facilis assumenda corrupti
+                    natus earum.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab voluptas ipsa culpa modi nam quam
+                    praesentium dolorem obcaecati ratione voluptatibus doloremque, tenetur accusamus quo rem atque esse
+                    nobis nemo quisquam, id totam nulla minus quidem voluptate impedit? Nesciunt saepe dolores
+                    voluptates quia. Sapiente magnam beatae officiis, omnis esse accusamus modi.</p>
+            </article>
+        </section>
+        <footer id="main_footer">
+            <h3>Lorem, ipsum dolor.</h3>
+            <address>Lorem ipsum dolor sit.</address>
+        </footer>
+    </div>
+</body>
+
+</html>
