@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width: 200px;
+            height: 200px;
+            position: relative;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            left: 0; top: 0;
+            position: absolute;
+        }
+        .box:nth-child(1){background-color: aquamarine;}
+        .box:nth-child(2){background-color: rgb(227, 255, 127);}
+        .box:nth-child(3){background-color: rgb(57, 19, 228);}
+        .box:nth-child(4){background-color: rgb(255, 126, 244);}
+        .box:nth-child(5){background-color: rgb(64, 189, 238);}
+        .box:nth-child(6){background-color: rgb(168, 255, 127);}
+
+        .box:nth-child(1){transform: translate3d(0px,0px, 100px);}
+        .box:nth-child(2){transform: rotateY(90deg) translate3d(0px,0px, 100px);}
+        .box:nth-child(3){transform: rotateY(180deg) translate3d(0px,0px, 100px);}
+        .box:nth-child(4){transform: rotateY(270deg) translate3d(0px,0px, 100px);}
+        .box:nth-child(5){transform: rotateX(90deg) translate3d(0px,0px, 100px);}
+        .box:nth-child(6){transform: rotateX(270deg) translate3d(0px,0px, 100px);}
+        .wrap{
+            transform-style: preserve-3d;
+        }
+        @keyframes d_ani{
+            0%{transform: rotatex(0deg)rotateY(0deg)rotatez(0deg)}
+           100%{transform: rotatex(360deg)rotateY(360deg)rotatez(360deg)}
+
+        }
+        .wrap{
+            animation-name: d_ani;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            left: 100px; top: 100px;
+        }
+        .box{
+            opacity: 0.5;
+        }
+        body{
+            width: 200px;
+            margin: 200px auto;
+            -webkit-perspective: 300;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>
